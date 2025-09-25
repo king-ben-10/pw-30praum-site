@@ -1,0 +1,405 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #1b1b1b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #111;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #ff4747;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  color: #ff4747;
+}
+
+.intro {
+  background: url("https://via.placeholder.com/1200x400/1b1b1b/ff4747?text=30PRAUM+Banner") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-text {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff4747;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  background: #ff4747;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.botao:hover {
+  background: #e23a3a;
+  transform: translateY(-3px);
+}
+
+.artistas, .perfil-artista, .discografia {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.artistas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.perfil-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.perfil-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+.perfil-info {
+  flex: 1;
+}
+
+.perfil-info h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff4747;
+}
+
+.perfil-info p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.card {
+  background: #222;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card .info h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ff4747;
+}
+
+.card .info p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #e74c3c;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card .btn:hover {
+  background: #c0392b;
+}
+
+.perfil-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.discografia h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #ff4747;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.album-card {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.album-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #ff4747;
+}
+
+.album-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.album-grid-wiu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.rank-music {
+  width: 100%;
+  background: #1b1b1b;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  overflow-x: auto;
+}
+
+.rank-music h2 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  border-bottom: 1px solid #555;
+  font-weight: 600;
+  color: #ff4747;
+}
+
+td {
+  border-bottom: 1px solid #333;
+  color: #ddd;
+}
+
+td.album {
+  padding-left: 20px;
+}
+
+td.reproducoes {
+  padding-right: 20px;
+}
+
+img.song-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 6px;
+}
+
+tr td:first-child {
+  width: 30px;
+}
+
+tr td:nth-child(2) {
+  width: 35%;
+}
+
+tr td:nth-child(3) {
+  width: 20%;
+}
+
+tr td:nth-child(4) {
+  width: 25%;
+}
+
+tr td:last-child {
+  width: 10%;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.song img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.song strong {
+  font-size: 15px;
+}
+
+.song span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+footer {
+  margin-top: auto;
+  background: #111;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.footer-links a:hover {
+  color: #ff4747;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .perfil-container {
+    flex-direction: column;
+  }
+
+  .perfil-img img {
+    max-width: 100%;
+  }
+
+  .album-grid, .album-grid-wiu {
+    width: 100%;
+  }
+}
